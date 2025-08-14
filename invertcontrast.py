@@ -303,7 +303,7 @@ def process_image(imgGroup, connection, config, mrdHeader):
         data = data.astype(np.int16)
 
     # Invert image contrast
-    data = maxVal-data
+    #JAS removed data = maxVal-data
     data = np.abs(data)
     np.save(debugFolder + "/" + "imgInverted.npy", data)
 
